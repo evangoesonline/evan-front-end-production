@@ -1,0 +1,421 @@
+/* Basic settings */
+body {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#wrap {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Announcement bar at top of page */
+.announcement {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    background-color: #99BC3B;
+    padding: .5rem 0 .5rem 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Header and nav menu start*/
+header {
+    text-align: center;
+    margin: auto;
+    position: relative;
+
+}
+
+div.logo {
+    text-align: center;
+    margin-right: 2rem;
+    display: inline;
+}
+
+div.logo>img {
+    margin: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: .5rem 0 .5rem 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+}
+
+li>a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    list-style-type: none;
+    padding: 10px 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+li>a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+li>a:hover::after,
+li>a.active-nav::after {
+    width: 100%;
+    background: #2081C370;
+}
+
+nav svg {
+    display: none;
+}
+
+/*Shopping cart */
+i.fa-bag-shopping {
+    color: #FB5607;
+    font-size: 3em;
+    opacity: 0.6;
+    transition: 0.3s;
+    margin-left: 2rem;
+}
+
+i.fa-bag-shopping:hover {
+    opacity: 1;
+}
+
+.cartModal {
+    background-color: #FB5607;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    display: none;
+
+}
+
+.cartModal li {
+    list-style-type: none;
+}
+
+/* End header and nav styling */
+
+/* Main heading with fallback font */
+h1 {
+    font-family: 'Lobster', cursive;
+    letter-spacing: .05em;
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+div h2 {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    color: #2081C3;
+    background-color: #ffffff75;
+    padding: 1rem;
+}
+
+div.hero {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    height: 50%;
+}
+
+img.hero {
+    width: 100%;
+}
+
+/* Text overlay on hero image */
+.heroBkgd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.chooseCategory {
+    padding: 0 0 .5rem 0;
+}
+
+p,
+div.chooseCategory {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+}
+
+/* Navigation bar (in header) styles. This changes to inline display when  */
+nav {
+    padding: .5rem;
+}
+
+div.intro,
+div.chooseCategory {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Drop down menu selector */
+select[name="departments"] {
+    border: 1px solid lightgrey;
+    padding: .5rem 1rem .5rem 1rem;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Important - below is product grid */
+.productGrid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 15px;
+    padding-bottom: 2rem;
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Clear floats after the columns */
+.productGrid:after {
+    content: "";
+    clear: both;
+}
+
+/* Below is for individual product output */
+.productCard {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    position: relative;
+}
+
+img.prodCardImage {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.prodTitle,
+.price,
+.addToCart,
+.addReview {
+    display: block;
+    margin: 5px;
+}
+
+/* Styles for product cards below */
+.prodTitle {
+    font-weight: 600;
+}
+
+button.addToCart {
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+    background-color: #2081C370;
+    border-radius: 5%;
+    font-size: 1.25em;
+}
+
+button.addToCart:hover {
+    transition-duration: 0.4s;
+    background-color: #2081C3;
+}
+
+.fa-star {
+    color: #fdc111;
+}
+
+.fa-star:hover {
+    color: #fdc11170;
+}
+
+
+/*Styling for review form*/
+div .reviewForm {
+    display: none;
+}
+
+input[type="text"],
+[type="textarea"] {
+    padding: .5rem;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+input[type=submit] {
+    border: none;
+    color: #fff;
+    background-color: #2081C370;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5%;
+}
+
+/* Multi column footer */
+footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    background-color: #383e44;
+    padding: .5rem 0 .5rem 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footerCols {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.footerCols>div::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0;
+    transition: all 0.3s;
+}
+
+
+.footerCols>div:hover::after,
+.footerCols>p p::after {
+    width: 50%;
+    background: #fff;
+}
+
+/* End footer styling */
+
+
+/* Start responsive media queries */
+@media screen and (min-width: 768px) {
+    .announcement {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 3em;
+
+    }
+
+    h2 {
+        font-size: 3.75em;
+    }
+
+    .chooseCategory {
+        padding: 0 0 .75rem 0;
+    }
+
+    section {
+        width: 27%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    section:last-child {
+        margin-right: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 0 2rem;
+    }
+}
+
+/* Portrait oriented tablets */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    div h2 {
+        font-size: 3em;
+    }
+
+    nav ul li:not(:first-child) {
+        display: none;
+    }
+
+    nav svg {
+        display: block;
+        text-align: center;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+/* End tablet media query */
+
+/* Start phone media query */
+@media screen and (max-width: 480px) {
+    .productCard {
+        width: 100%;
+    }
+
+    .productGrid {
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+
+    .footerCols {
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+
+    i.fa-bag-shopping {
+        margin: 10px 0 0 0;
+    }
+
+    nav ul li:not(:first-child) {
+        display: none;
+    }
+
+    nav svg {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    div h2 {
+        padding: 0;
+    }
+
+    p,
+    div.chooseCategory {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        margin: 0 0.25rem 0.25rem 0;
+    }
+
+    div h1 {
+        margin-top: 0;
+    }
+}
+
+/*End smartphone media queries */
+/* End reponsive media queries */

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<!--Google fonts, favicon and fontawesome icons loaded below-->
+
+<head>
+    <title>Evan's Shop</title>
+    <meta name="description" content="Online deals that can't be beat">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images\favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/efc0cf809e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Announcement bar at top of page-->
+    <div class="announcement">Frequent shopper members enjoy 10% off everyday!</div>
+    <div id="wrap">
+        <!--Begin header and nav-->
+        <header>
+
+            <nav>
+
+                <ul>
+
+
+                    <li><a href="#"><img src="images\logo.png" alt="our logo"></a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Deals & Flyer</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <i class="fa-solid fa-bag-shopping" onclick="myFunction()"></i>
+                </ul>
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                </svg>
+
+            </nav>
+
+        </header>
+        <!--End header and nav-->
+        <!--Begin main content-->
+        <main>
+
+            <div class="intro">
+                <h1>Welcome to Evan's Shop</h1>
+
+            </div>
+            <!-- <Main hero image-->
+            <div class="hero">
+                <img src="images\grocery-store-background.png" class="hero" alt="grocery store aisle">
+                <div class="heroBkgd">
+                    <h2>Healthy food at healthy prices!</h2>
+                </div>
+            </div>
+            <div class="intro">
+                <p>Please choose a department below to see available products</p>
+            </div>
+            <!--Product category select-->
+            <div class="chooseCategory"><label for="departments">Choose a department:</label>
+
+                <select name="departments" id="departments">
+                    <option value="produce">Produce</option>
+                    <option value="meat">Meat</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="pantry">Pantry</option>
+                </select>
+            </div>
+            <!--Begin product grid-->
+            <div class="productGrid">
+                <div class="productCard">
+                    <img src="images\beets-for-sale.jpg" alt="Some tasty beets for sale" class="prodCardImage">
+                    <span class="prodTitle">Beets</span><span class="price">$2.49</span><button type="button"
+                        class="addToCart">Add to cart!</button><span class="addReview" onclick="showReview()">Leave a
+                        review</span>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i>
+                    <div class="reviewForm">
+                        <form> <label for="fname">Your name:</label><br>
+                            <input type="text" id="fname" name="fname" placeholder="First name"><br>
+                            <label for="reviewText">Your review:</label><br>
+                            <input type="textarea" id="reviewText" name="reviewText" placeholder="How was it?"><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="productCard"><img src="images\carrots-for-sale.jpg" alt="Crunchy carrots for sale"
+                        class="prodCardImage"><span class="prodTitle">Carrots</span><span
+                        class="price">$3.99</span><button type="button" class="addToCart">Add to cart!</button><span
+                        class="addReview">Leave a review</span><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\lettuce-for-sale.jpg" alt="Crisp, fresh lettuce for sale"
+                        class="prodCardImage"><span class="prodTitle">Lettuce</span><span
+                        class="price">$2.99</span><button type="button" class="addToCart">Add to cart!</button><span
+                        class="addReview">Leave a review</span><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\apples-for-sale.jpg" alt="Some tasty apples for sale"
+                        class="prodCardImage"><span class="prodTitle">Apples</span><span
+                        class="price">$2.29/lb</span><button type="button" class="addToCart">Add to cart!</button><span
+                        class="addReview">Leave a review</span><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\bananas-for-sale.jpg" alt="Some tasty bananas for sale"
+                        class="prodCardImage"><span class="prodTitle">Bananas</span><span
+                        class="price">$0.99/lb</span><button type="button" class="addToCart">Add to cart!</button><span
+                        class="addReview">Leave a review</span><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\bread-for-sale.jpg" alt="Freshly baked bread for sale"
+                        class="prodCardImage"><span class="prodTitle">Bread</span><span
+                        class="price">$2.99</span><button type="button" class="addToCart">Add to cart!</button><span
+                        class="addReview">Leave a review</span><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\eggs-for-sale.jpg" alt="Fresh eggs for sale"
+                        class="prodCardImage"><span class="prodTitle">Eggs</span><span class="price">$3.49</span><button
+                        type="button" class="addToCart">Add to cart!</button><span class="addReview">Leave a
+                        review</span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="productCard"><img src="images\milk-for-sale.jpg" alt="Farm fresh milk for sale"
+                        class="prodCardImage"><span class="prodTitle">Milk</span><span class="price">$4.99</span><button
+                        type="button" class="addToCart">Add to cart!</button><span class="addReview">Leave a
+                        review</span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <!--End product grid-->
+            <!--Begin footer-->
+            <footer>
+                <div class="footerCols">
+                    <div>
+
+                        <p>&copy;2022 Evan's Shop</p>
+
+
+
+                    </div>
+                    <div>
+                        <p><a href="mailto:webmaster@example.com">Email Us</a></p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p>Privacy</p>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+            <!--End footer-->
+    </div>
+
+    </main>
+    <!--End main content-->
+
+</body>
+
+
+</html>
